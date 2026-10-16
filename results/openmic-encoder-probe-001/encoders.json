@@ -1,0 +1,113 @@
+{
+ "dataset": "OpenMIC-2018 (Zenodo 1432913); split described in README.md",
+ "features": {
+  "afnext-whisper": {
+   "encoder": {
+    "name": "afnext-whisper",
+    "repo": "nvidia/audio-flamingo-next-hf",
+    "sample_rate": 16000,
+    "frame_rate": 50.0,
+    "n_layers": 33,
+    "dim": 1280,
+    "fusion": "mlp_reduce",
+    "chunk_seconds": 30.0,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 7014.6
+  },
+  "matpac-general": {
+   "encoder": {
+    "name": "matpac-general",
+    "repo": "auriankelen/matpac_general_audio",
+    "revision": "c19b99f7a85d3805d0eafbfde69f986f4ab76566",
+    "sample_rate": 16000,
+    "n_layers": 12,
+    "dim": 3840,
+    "pooling": "mean over time per layer, inference_type=precise"
+   },
+   "extract_seconds": 563.6
+  },
+  "mert": {
+   "encoder": {
+    "name": "mert-v1-330m",
+    "repo": "m-a-p/MERT-v1-330M",
+    "sample_rate": 24000,
+    "frame_rate": 75.0,
+    "n_layers": 25,
+    "dim": 1024,
+    "fusion": "mlp_reduce",
+    "chunk_seconds": 30.0,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 1445.1
+  },
+  "af3-whisper": {
+   "encoder": {
+    "name": "af3-whisper",
+    "repo": "nvidia/audio-flamingo-3-hf",
+    "sample_rate": 16000,
+    "frame_rate": 50.0,
+    "n_layers": 33,
+    "dim": 1280,
+    "fusion": "mlp_reduce",
+    "chunk_seconds": 30.0,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 7150.3
+  },
+  "pupum2d": {
+   "encoder": {
+    "name": "pupum2d-large",
+    "repo": "spellbrush/PupuM2D",
+    "sample_rate": 24000,
+    "frame_rate": 25.0,
+    "n_layers": 25,
+    "dim": 8192,
+    "fusion": "weighted_sum",
+    "chunk_seconds": 10.24,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 2203.0
+  },
+  "qwen3-omni-aut": {
+   "encoder": {
+    "name": "qwen3-omni-aut",
+    "repo": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+    "sample_rate": 16000,
+    "frame_rate": 13.0,
+    "n_layers": 33,
+    "dim": 1280,
+    "fusion": "mlp_reduce",
+    "chunk_seconds": 30.0,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 6819.0
+  },
+  "muq": {
+   "encoder": {
+    "name": "muq-large-msd-iter",
+    "repo": "OpenMuQ/MuQ-large-msd-iter",
+    "sample_rate": 24000,
+    "frame_rate": 25.0,
+    "n_layers": 13,
+    "dim": 1024,
+    "fusion": "mlp_reduce",
+    "chunk_seconds": 30.0,
+    "pooling": "mean over time per layer"
+   },
+   "extract_seconds": 873.8
+  },
+  "matpac-music": {
+   "encoder": {
+    "name": "matpac-music",
+    "repo": "auriankelen/matpac_music",
+    "revision": "a7e10eb8d14c764673f4364884fb06c9f9f88887",
+    "sample_rate": 16000,
+    "n_layers": 12,
+    "dim": 3840,
+    "pooling": "mean over time per layer, inference_type=precise"
+   },
+   "extract_seconds": 442.1
+  }
+ }
+}

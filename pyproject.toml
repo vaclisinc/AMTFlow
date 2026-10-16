@@ -1,0 +1,64 @@
+[project]
+name = "amtflow"
+version = "0.1.0"
+description = "Modular instrument-conditioned automatic music transcription: tag instruments, route to an AMT model, emit notes"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Song-Ze Yu" }]
+keywords = ["music transcription", "AMT", "MIR", "MuScriptor", "instrument recognition"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch>=2.7",
+    "torchaudio>=2.7",
+    "numpy",
+    "soundfile",
+    "librosa",
+    "pyyaml",
+    "huggingface_hub",
+    "safetensors",
+    "transformers>=4.45",
+    "timm",
+    "einops",
+    "easydict",
+    "json5",
+    "muscriptor==0.3.0",
+    "scikit-learn",
+    "scipy",
+    "mir_eval",
+    "requests",
+    "pretty_midi",
+]
+
+[project.optional-dependencies]
+separation = ["bs-roformer-infer @ git+https://github.com/openmirlab/bs-roformer-infer@04cfa4be2d04ad5164c6f7e97ff31f37b0b162fe", "ml-collections"]
+
+[project.urls]
+Repository = "https://github.com/vaclisinc/AMTFlow"
+
+[project.scripts]
+amtflow = "amtflow.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/amtflow"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"configs" = "amtflow/configs"
+
+[tool.uv]
+environments = ["sys_platform == 'linux'", "sys_platform == 'darwin' and platform_machine == 'arm64'"]
+
+[tool.hatch.metadata]
+allow-direct-references = true

@@ -1,0 +1,21 @@
+# Stem mode (an extension, not the paper's method): BS-RoFormer six-stem separation;
+# the bass/drums/guitar/piano/vocals stems get fixed instrument constraints and the
+# `other` stem uses the paper's tagger. On real pop recordings it trails the mixture
+# configs (results/multtipop-yt-v2-001); it helps when a guitar's exact type matters
+# (results/guitarset05-configs-001).
+extends: paper.yaml
+
+separator:
+  name: bsroformer
+  checkpoint: auto            # SW-Fixed six-stem, downloaded on first use
+  config: auto
+
+min_stem_coverage: 5.0     # percent of 100 ms blocks above -40 dBFS
+
+stems:
+  bass: {families: [bass], instruments: [acoustic_bass, electric_bass]}
+  drums: {families: [drums], instruments: [drums]}
+  guitar: {families: [guitar], instruments: [acoustic_guitar, clean_electric_guitar, distorted_electric_guitar]}
+  piano: {families: [piano], instruments: [acoustic_piano, electric_piano]}
+  vocals: {families: [vocals], instruments: [voice]}
+  # other: tagger (default when a stem has no rule)

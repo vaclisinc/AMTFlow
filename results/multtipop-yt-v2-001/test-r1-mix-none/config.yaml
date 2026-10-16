@@ -1,0 +1,3 @@
+extends: paper.yaml
+tagger: {name: fixed, families: []}
+transcriber: {weights: medium, batch_size: 1, prelude_forcing: true}

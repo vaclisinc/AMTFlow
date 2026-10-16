@@ -1,0 +1,2 @@
+extends: paper.yaml
+transcriber: {weights: medium, batch_size: 1, prelude_forcing: true}

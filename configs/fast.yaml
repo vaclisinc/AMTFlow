@@ -1,0 +1,8 @@
+# Throughput-first variant for large corpora: MuScriptor medium, the 5 s chunks of a
+# clip decoded as one batch (needs prelude_forcing off, trading chunk-boundary quality).
+extends: paper.yaml
+
+transcriber:
+  weights: medium
+  batch_size: 6
+  prelude_forcing: false

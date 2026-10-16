@@ -1,0 +1,10 @@
+# Stem mode plus a click track: noise clicks on beats tracked (beat_this) on the mixture,
+# mixed at the stem's RMS into every pitched stem before transcription; tagging still sees
+# the clean stem. On MulTTiPop test (oracle `other` tags) it adds about 2 points of
+# instrument-agnostic onset F1 over plain stems. Needs the `separation` extra.
+extends: stems.yaml
+
+stem_context:
+  source: click
+  gain_db: 0
+  stems: [bass, guitar, piano, vocals, other]

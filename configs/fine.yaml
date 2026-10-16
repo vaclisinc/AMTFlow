@@ -1,0 +1,95 @@
+# Finer families than the paper (paper.yaml): winds split into brass / reeds / flutes,
+# organ (incl. accordion, harmonica: MuScriptor's organ group) and chromatic percussion
+# become routable, and every family routes top-N inside its groups. Vocals stay unrouted
+# (instrumental Jamendo in the paper); `fine-voice.yaml` adds a voice family.
+extends: paper.yaml
+
+families:
+  brass: [brass_section]
+  reeds: [tenor_sax]
+  flutes: [flutes]
+  organ: [organ]
+  chromatic: [chromatic_percussion]
+
+family_groups:
+  brass: [trumpet, trombone, tuba, french_horn, brass_section]
+  reeds: [soprano_and_alto_sax, tenor_sax, baritone_sax, oboe, english_horn, bassoon, clarinet]
+  flutes: [flutes]
+  organ: [organ]
+  chromatic: [chromatic_percussion]
+
+label_families:
+  brass: brass
+  brasssection: brass
+  horn: brass
+  horns: brass
+  hornsection: brass
+  frenchhorn: brass
+  trumpet: brass
+  trombone: brass
+  tuba: brass
+  sax: reeds
+  saxophone: reeds
+  altosax: reeds
+  tenorsax: reeds
+  baritonesax: reeds
+  sopranosax: reeds
+  clarinet: reeds
+  oboe: reeds
+  bassoon: reeds
+  englishhorn: reeds
+  woodwinds: reeds
+  winds: reeds
+  flute: flutes
+  piccolo: flutes
+  recorder: flutes
+  panflute: flutes
+  accordion: organ
+  harmonica: organ
+  organ: organ
+  pipeorgan: organ
+  electricorgan: organ
+  hammondorgan: organ
+  bell: chromatic
+  bells: chromatic
+  malletpercussion: chromatic
+  glockenspiel: chromatic
+  marimba: chromatic
+  xylophone: chromatic
+  vibraphone: chromatic
+  celesta: chromatic
+  musicbox: chromatic
+
+label_groups:
+  organ: [organ]
+  pipeorgan: [organ]
+  accordion: [organ]
+  harmonica: [organ]
+  bell: [chromatic_percussion]
+  malletpercussion: [chromatic_percussion]
+  glockenspiel: [chromatic_percussion]
+  marimba: [chromatic_percussion]
+  xylophone: [chromatic_percussion]
+  vibraphone: [chromatic_percussion]
+
+routing: {mode: topn, ratio: 0.5, max_per_family: 3}
+
+tagger:
+  name: union
+  members:
+    - name: matpac
+      variant: music
+      heads: [openmic, mtg_instrument]
+      probe_dir: auto
+      window_seconds: 6.0
+      hop_seconds: 6.0
+      top_fraction: 0.10
+      minimum_windows: 2
+      thresholds: {piano: 0.5, guitar: 0.5, bass: 0.5, drums: 0.5, strings: 0.5, brass: 0.5,
+                   reeds: 0.5, flutes: 0.5, organ: 0.5, chromatic: 0.5}
+    - name: alm
+      model: music-flamingo
+      prompt: both
+      label_overrides: {percussion: drums}
+
+transcriber: {name: muscriptor, weights: medium, batch_size: 1, prelude_forcing: true}

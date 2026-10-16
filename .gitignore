@@ -1,0 +1,6 @@
+.venv
+__pycache__/
+*.py[cod]
+/ref/
+/outputs/
+AGENTS.local.md

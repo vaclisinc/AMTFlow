@@ -1,0 +1,2 @@
+extends: stems.yaml
+transcriber: {weights: medium, batch_size: 6, prelude_forcing: false}

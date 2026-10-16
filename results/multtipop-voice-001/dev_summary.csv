@@ -1,0 +1,13 @@
+split,reference,arm,segments,exact,group,family,agnostic
+dev,official,pub:mt3,166,11.52,16.72,18.86,30.49
+dev,vocal_corrected,pub:mt3,166,11.56,16.72,18.83,30.49
+dev,official,pub:yourmt3,166,11.57,18.52,21.57,30.89
+dev,vocal_corrected,pub:yourmt3,166,12.33,19.27,22.3,30.89
+dev,official,pub:muscriptor,166,20.06,31.62,35.54,44.7
+dev,vocal_corrected,pub:muscriptor,166,20.52,32.04,35.93,44.7
+dev,official,R1 no tags,166,19.98,30.94,35.07,44.73
+dev,vocal_corrected,R1 no tags,166,20.43,31.37,35.48,44.73
+dev,official,R4 default (7 families),166,22.16,30.99,39.85,45.7
+dev,vocal_corrected,R4 default (7 families),166,22.16,30.9,39.66,45.7
+dev,official,R9 default + voice,166,21.2,30.5,38.56,46.68
+dev,vocal_corrected,R9 default + voice,166,22.12,31.31,39.33,46.68

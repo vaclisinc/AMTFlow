@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "AMTFlow is the transcription pipeline of MIDI-REPA. If you use it, please cite the paper below."
+title: AMTFlow
+license: MIT
+repository-code: https://github.com/vaclisinc/AMTFlow
+authors:
+  - {family-names: Yu, given-names: Song-Ze}
+  - {family-names: Tsai, given-names: Fang-Duo}
+  - {family-names: Yang, given-names: Yi-Hsuan}
+preferred-citation:
+  type: article
+  title: "MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment"
+  authors:
+    - {family-names: Yu, given-names: Song-Ze}
+    - {family-names: Tsai, given-names: Fang-Duo}
+    - {family-names: Yang, given-names: Yi-Hsuan}
+  year: 2026
+  identifiers:
+    - {type: other, value: "arXiv:2610.20967"}
+  url: "https://arxiv.org/abs/2610.20967"

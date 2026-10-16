@@ -1,0 +1,4 @@
+extends: stems.yaml
+transcriber: {name: pyin, stems: [bass, vocals, guitar, piano, other]}
+stems:
+  other: {instruments: []}

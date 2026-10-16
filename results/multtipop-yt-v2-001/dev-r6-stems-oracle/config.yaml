@@ -1,0 +1,3 @@
+extends: stems.yaml
+tagger: {name: oracle}
+transcriber: {weights: medium, batch_size: 1, prelude_forcing: true}

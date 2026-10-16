@@ -1,0 +1,44 @@
+# AMTFlow default: the MIDI-REPA tagger (MATPAC++ ∪ Music Flamingo) on the mixture, the
+# seven MIDI-REPA families plus voice, top-N routing of MuScriptor instruments inside each
+# detected family, MuScriptor medium with prelude forcing. paper.yaml is the MIDI-REPA
+# pipeline: built for vocal-removed music, no voice family, one instrument per family,
+# MuScriptor large.
+extends: paper.yaml
+
+families:
+  voice: [voice]
+family_groups:
+  voice: [voice]
+label_families:
+  voice: voice
+  vocals: voice
+  vocal: voice
+  choir: voice
+  singing: voice
+label_groups:
+  voice: [voice]
+  vocals: [voice]
+  choir: [voice]
+
+routing: {mode: topn, ratio: 0.5, max_per_family: 3}
+
+tagger:
+  name: union
+  members:
+    - name: matpac
+      variant: music
+      heads: [openmic, mtg_instrument]
+      probe_dir: auto
+      window_seconds: 6.0
+      hop_seconds: 6.0
+      top_fraction: 0.10
+      minimum_windows: 2
+      thresholds: {piano: 0.5, guitar: 0.5, bass: 0.5, drums: 0.5, strings: 0.5, winds: 0.5,
+                   voice: 0.5}
+    - name: alm
+      model: music-flamingo
+      prompt: both
+      label_overrides: {percussion: drums}
+
+transcriber:
+  weights: medium

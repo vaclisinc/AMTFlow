@@ -1,0 +1,36 @@
+id,split,ytid,artist,title,meta_start,meta_end,audio_length,kind,applied_offset_s,lead_silence_s,measured_shift_s,agree_at_0,agree_at_shift,beat_phase_confirms
+Mkygz-YzmKB,dev,Wt5EHAqhR1c,Ben Folds Five,Brick,-0.5,21.13,21.63,negative_start,0.0,0.5,0.485,0.0,0.97,
+dJNgqlLwmrz,dev,2EaflX0MWRo,Four Tops,Reach Out I'll Be There,-0.45,37.01,37.46,negative_start,0.0,0.45,0.435,0.01,0.753,
+lamkn_kMoDM,dev,EfAhpX_wIBk,Jars Of Clay,Flood,-0.35,8.985,9.335,negative_start,0.0,0.35,0.355,0.423,0.982,
+BbWgMArPglX,test,82v0kX95EY0,Evanescence ,My Immortal,-0.45,13.35,13.8,negative_start,0.0,0.45,0.455,0.024,0.976,
+Dpgv-EERmad,test,eeZ4M6MT-CE,The Smashing Pumpkins,Luna,-0.07,16.333,16.402,negative_start,0.0,0.07,0.075,0.0,0.926,
+DpgvN-eegad,test,Y4O7ufx9D_s,Jack Johnson,Breakdown,0.79,14.59,13.8,video_offset,0.76,0.0,-0.755,0.165,0.853,yes
+JNgqpZyemrz,test,_Y7fsowFepU,Blondie,Sunday Girl,6.29,20.152,13.862,recovered_download,0.0,0.0,,,,
+JkmZaGykoqn,test,_CsJCa2TlXU,ABBA,Bang-A-Boomerang,1.013,16.567,15.554,video_offset+recovered_download,-0.49,0.0,0.455,0.32,0.63,
+KexEOYYXm_B,test,9KHQnlFwxzU,Steely Dan,Peg,-0.08,17.146,17.226,negative_start,0.0,0.08,0.07,0.063,0.832,
+LAgQGwBvoyO,test,UqCEPytSFqU,Pink Floyd,The Great Gig In The Sky,-0.23,43.691,43.921,negative_start,0.0,0.23,0.23,0.046,0.793,
+NlamklYvgDM,test,Y4O7ufx9D_s,Jack Johnson,Breakdown,13.78,27.6,13.82,video_offset,0.76,0.0,-0.755,0.313,0.809,yes
+ROmNeBj_oNw,test,_ElORM9O-0U,Tal Bachman,She's So High,22.718,41.152,18.434,recovered_download,0.0,0.0,,,,
+ROmNwjwEgNw,test,a502RejLz8s,Art Garfunkel,Bright Eyes,-0.23,26.76,26.99,negative_start,0.0,0.23,0.22,0.0,0.815,
+RzojLOnQgDe,test,_d5dPYHi17k,ABBA,Summer Night City,59.881,84.736,24.855,recovered_download,0.0,0.0,,,,
+RzojNNMAoDe,test,rubpIfLPzvU,Jimmy Eat World,The Middle,-0.4,36.154,36.554,negative_start,0.0,0.4,0.4,0.738,0.816,
+WeglGOdYmrY,test,c0A7jAVDPJU,Carly Simon,Coming Around Again,14.11,42.9,28.79,video_offset,0.15,0.0,-0.145,0.0,0.704,yes
+WeglOyOLmrY,test,tWjNFC-FinU,Lily Allen,22,33.4,63.67,30.27,video_offset,-0.54,0.0,0.535,0.078,0.55,yes
+WegljarYorY,test,7__rt0hRm8s,Carly Simon,Nobody Does It Better,-0.5,8.1,8.6,negative_start,0.0,0.5,0.475,0.073,0.954,
+YAg-kBlJole,test,cZUQ3xhmu_A,Nightwish,Ever Dream,-0.5,26.37,26.87,negative_start,0.0,0.5,0.5,0.0,0.687,
+ZOxVKjKNodq,test,fUYaosyR4bE,Lily Allen,Not Fair,65.2,97.9,32.7,video_offset,0.97,0.0,-0.965,0.421,0.7,yes
+ZOxVYqEGgdq,test,Ft1lxiWFbDk,Jimmy Eat World,Bleed American,-0.16,12.91,13.07,negative_start,0.0,0.16,0.165,0.463,0.925,
+ZOxVbElAxdq,test,_ElORM9O-0U,Tal Bachman,She's So High,-0.34,23.691,24.031,negative_start+recovered_download,0.0,0.34,,,,
+ZwxKakzjmed,test,1TO48Cnl66w,Dido,Thank You,17.46,42.46,25.0,video_offset,0.06,0.0,-0.06,0.08,0.741,
+ZwxKpWQPoed,test,p1a_4CN4onA,Blur,Charmless Man,59.903,68.553,8.65,video_offset,-0.56,0.0,0.555,0.213,0.706,
+dVMgJwXExqK,test,Y4O7ufx9D_s,Jack Johnson,Breakdown,39.42,53.24,13.82,video_offset,0.76,0.0,-0.76,0.175,0.89,yes
+d_gwaYZeoGV,test,loWXMtjUZWM,Foreigner,I Want to Know What Love Is,-0.19,15.619,15.809,negative_start,0.0,0.19,0.185,0.0,0.703,
+d_gwdN_QxGV,test,mpdcKmaHk_s,Five,When The Lights Go Out,69.4,93.78,24.38,video_offset,0.26,0.0,-0.255,0.22,0.566,yes
+d_gwyJBeoGV,test,PJGpsL_XYQI,Evanescence,Lithium,-0.5,9.39,9.89,negative_start,0.0,0.5,0.505,0.125,0.771,
+jDgXAQNnxKl,test,_Y7fsowFepU,Blondie,Sunday Girl,32.584,48.122,15.539,recovered_download,0.0,0.0,,,,
+jDgXNwVdoKl,test,Urw-iutHw5E,Falco,Jeanny,81.13,101.26,20.13,video_offset,0.18,0.0,-0.175,0.005,0.494,yes
+nJmBkAWEgAV,test,c0A7jAVDPJU,Carly Simon,Coming Around Again,41.96,63.9,21.94,video_offset,0.15,0.0,-0.15,0.01,0.429,yes
+nLga_nMboYp,test,AHU-8yb11CQ,Robbie Williams,Advertising Space,-0.16,17.81,17.97,negative_start,0.0,0.16,0.15,0.0,0.855,
+nZgWW_XEgry,test,u_ppF2yK4NM,Snap,Rhythm Is A Dancer,-0.5,8.16,8.66,negative_start,0.0,0.5,0.54,0.119,0.932,
+nvgy-Ew_gkA,test,dQw4w9WgXcQ,Rick Astley,Never Gonna Give You Up,17.654,44.014,26.361,video_offset,-0.07,0.0,0.07,0.104,0.681,
+yvgPlQpAgYq,test,_CsJCa2TlXU,ABBA,Bang-A-Boomerang,44.722,76.555,31.833,video_offset+recovered_download,-0.49,0.0,0.515,0.08,0.74,

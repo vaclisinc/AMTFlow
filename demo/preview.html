@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMTFlow · example candidates</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="AMTFlow: a modular framework for instrument-aware music transcription.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/midi-realplayer@0.1.3"></script>
+  <style>
+    :root {
+      --paper: #ffffff;
+      --paper-sunk: #f5f4f2;
+      --ink: #1d1a17;
+      --ink-soft: #48423c;
+      --muted: #6e675f;
+      --rule: #dedad4;
+      --felt: #2b4f8f;
+      --sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #141311; --paper-sunk: #1d1c19; --ink: #ece8e2; --ink-soft: #c9c3bb;
+        --muted: #9a938a; --rule: #34312d; --felt: #8fb0ec;
+      }
+    }
+    :root[data-theme="dark"] {
+      --paper: #141311; --paper-sunk: #1d1c19; --ink: #ece8e2; --ink-soft: #c9c3bb;
+      --muted: #9a938a; --rule: #34312d; --felt: #8fb0ec; color-scheme: dark;
+    }
+    :root[data-theme="light"] { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+    main { width: min(100% - 2 * clamp(1rem, 4vw, 2.5rem), 66rem); margin-inline: auto; padding-block: clamp(2rem, 5vw, 3.5rem) 4rem; }
+    .site-brand { display: inline-block; margin-bottom: 1.75rem; color: var(--ink); font-size: 1.5rem; font-weight: 600; letter-spacing: -.05em; text-decoration: none; line-height: 1; }
+    .site-brand:hover, .site-brand:focus-visible { color: var(--felt); }
+    .title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .theme-toggle { flex: none; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-top: .2rem; padding: 0; border: 1px solid var(--rule); background: none; color: var(--ink-soft); cursor: pointer; }
+    .theme-toggle:hover, .theme-toggle:focus-visible { color: var(--felt); border-color: var(--felt); }
+    .theme-toggle svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+    .theme-toggle .icon-sun, :root[data-effective-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    :root[data-effective-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    h1 { margin: 0 0 .5rem; font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; line-height: 1.05; letter-spacing: -.015em; }
+    .links { display: flex; flex-wrap: wrap; gap: .4rem .6rem; margin: 0 0 1.25rem; font-size: .875rem; }
+    .links a { padding: .1rem .55rem; border: 1px solid var(--rule); color: var(--ink-soft); font-weight: 600; text-decoration: none; }
+    .links a:hover, .links a:focus-visible { border-color: var(--felt); color: var(--felt); }
+    a { color: var(--felt); }
+    code { font-family: var(--mono); font-size: .85em; }
+    pre { margin: 0; padding: .9rem 1rem; background: var(--paper-sunk); border: 1px solid var(--rule); overflow-x: auto; font: .8125rem/1.6 var(--mono); }
+    .results { padding-block: 1.75rem 2rem; border-top: 1px solid var(--rule); display: grid; gap: .9rem; }
+    .results h2 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -.01em; }
+    .results p { margin: 0; max-width: 46rem; color: var(--ink-soft); }
+    .results table { border-collapse: collapse; width: 100%; max-width: 46rem; font-size: .9375rem; }
+    .results th, .results td { padding: .4rem .6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+    .results th { font-size: .8125rem; font-weight: 600; color: var(--muted); }
+    .results td.num { text-align: right; font-variant-numeric: tabular-nums; width: 4.5rem; }
+    .results td.bar { width: 40%; }
+    .results .fill { height: .6rem; background: var(--rule); }
+    .results tr.ours td { font-weight: 600; color: var(--ink); }
+    .results tr.ours .fill { background: var(--felt); }
+    .results .note { font-size: .8125rem; color: var(--muted); }
+    .case { padding-block: 2rem; border-top: 1px solid var(--rule); display: grid; gap: .9rem; }
+    .case-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; }
+    .case h3 { margin: 0; font-size: 1.125rem; font-weight: 600; letter-spacing: -.01em; }
+    .case .license { color: var(--muted); font-size: .875rem; }
+    .case p { margin: 0; max-width: 46rem; color: var(--ink-soft); }
+    .facts { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; font-size: .875rem; color: var(--muted); }
+    .facts b { color: var(--ink); font-weight: 600; }
+    .switch { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); width: fit-content; }
+    .switch button { padding: .3rem .8rem; border: 0; border-right: 1px solid var(--rule); background: none; color: var(--ink-soft); font: 600 .875rem var(--sans); cursor: pointer; }
+    .switch button:last-child { border-right: 0; }
+    .switch button[aria-pressed="true"] { background: var(--felt); color: var(--paper); }
+    .switch button:hover:not([aria-pressed="true"]), .switch button:focus-visible { color: var(--felt); }
+    midi-realplayer { border: 1px solid var(--rule); }
+    footer { margin-top: 1rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-size: .8125rem; color: var(--muted); }
+    footer p { margin: 0 0 .4rem; max-width: 52rem; }
+    .figure { margin: .5rem 0 1.5rem; border: 1px solid var(--rule); }
+    .figure svg { display: block; width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+<main>
+  <a class="site-brand" href="https://vaclis.net" aria-label="vaclis. home">vaclis.</a>
+  <div class="title-row">
+    <h1>AMTFlow</h1>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+    </button>
+  </div>
+  <p class="links">
+    <a href="https://github.com/vaclisinc/AMTFlow">GitHub</a>
+    <a href="https://github.com/vaclisinc/AMTFlow/blob/main/docs/usage.md">Documentation</a>
+    <a href="https://arxiv.org/abs/2610.20967">Paper (arXiv)</a>
+  </p>
+  <section class="results"><h2>Example candidates (preview, not linked)</h2></section>
+
+  <div id="cases"></div>
+
+  <footer>
+    <p>Each example plays an excerpt of the recording above the MIDI tracks. Examples with an excerpt other than 0:45–1:15 were transcribed as full tracks and then cut to the excerpt shown. Press S on a track to hear it alone, or M to mute it. Starting one player pauses the others.</p>
+    <p>The recordings are vocal-removed Jamendo tracks from the ATTM challenge test set, shared under the artists' Creative Commons licences. AMTFlow ran the MIDI-REPA pipeline (<code>--config paper</code>), which was built for instrumental music. All three versions use MuScriptor large. "All tags" gives MuScriptor every one of the seven families. Instruments listed under "Jamendo tags" were tagged by the uploader on Jamendo, not by AMTFlow. All transcriptions come from models and contain errors.</p>
+  </footer>
+</main>
+
+<script>
+
+  const CASES = [
+    { id: "1169734", title: "OnClassical – Brahms: Waltz Op. 39 No. 15 (\u201cLullaby\u201d)", license: "CC BY-NC-SA 3.0", window: "0:15–0:45",
+      text: "Solo piano. With all tags, MuScriptor adds 83 electric guitar, 81 drum and 39 bass notes. AMTFlow and no tags both write piano only.",
+      tags: "piano", detected: "piano, strings (no string notes in this excerpt)" },
+    { id: "1210605", title: "Aufklarung – Grand Father Memories", license: "CC BY-NC-SA 3.0", window: "2:15–2:45",
+      text: "Piano. With all tags, MuScriptor adds 66 bass, 50 violin and 45 drum notes. AMTFlow and no tags both write piano only.",
+      tags: "piano", detected: "piano, strings (no string notes in this excerpt)" },
+    { id: "88558", title: "Ludo et Rémi – Sourire Fragile - Pleurs", license: "CC BY-NC-SA 3.0", window: "0:35–1:05",
+      text: "Piano, violin and brass. With all tags, MuScriptor writes no brass and adds 62 electric bass and 61 synth pad notes. AMTFlow: piano, violin and brass, matching the tags. Without tags: piano, strings and flute.",
+      tags: "piano, violin, brass section", detected: "piano, strings, winds" },
+    { id: "1375974", title: "Blik – Not So Crazy", license: "CC BY-SA 3.0",
+      text: "Candidate. Without tags there is no guitar (344 bass notes). With all tags, piano and bass parts are added. AMTFlow: guitar and drums.",
+      tags: "guitar, synthesizer", detected: "guitar, drums, synthesizer" },
+    { id: "938052", title: "Löhstana David – Morve rose (instrumental version)", license: "CC BY-NC-SA 3.0",
+      text: "Candidate. Without tags, guitar only. With all tags, 262 piano, 117 drum and 50 bass notes appear. AMTFlow: guitar, a few drums and bass notes.",
+      tags: "guitar, drums", detected: "guitar, bass, drums" },
+    { id: "387501", title: "Oleg Serkov – I still remember", license: "CC BY-NC-SA 3.0",
+      text: "Candidate. Without tags, guitar only. With all tags, close to AMTFlow plus a synth pad part. AMTFlow: piano, guitar, bass.",
+      tags: "piano, guitar, bass, drums", detected: "piano, guitar, bass, drums" },
+    { id: "632094", title: "Alexandr Ossipov production music – Dancing Santa", license: "CC BY-SA 3.0", window: "0:55–1:25",
+      text: "Full-track failure. Without tags, MuScriptor writes piano only for the whole track and misses the violin and brass. With all tags, it adds guitar, bass and a synth pad, and in the last 5 s it stacks 810 drum notes on a single onset. AMTFlow: piano, violin, a few brass notes and light drums, stable to the end.",
+      tags: "piano, violin, brass section", detected: "piano, drums, strings, winds" },
+    { id: "764950", title: "Josh Woodward – Motionless Land (instrumental version)", license: "CC BY 3.0", window: "1:25–2:05",
+      text: "Full-track failure. With all tags, piano, bass and drums are added, and from 1:30 every part gets stuck repeating the same pitches about 14 times per second (650–750 notes per 5 s). Without tags, guitar only. AMTFlow: guitar with some bass and drums, at most 85 notes per 5 s.",
+      tags: "guitar", detected: "guitar, bass, drums" },
+    { id: "945206", title: "Disconauts Music Production – Breath", license: "CC BY-NC-SA 3.0", window: "1:35–2:15",
+      text: "Full-track failure. Without tags, MuScriptor writes nothing from 1:45 to 2:25 although the music continues, and drops out again at 2:30 (10 s) and 3:20 (20 s). With all tags the output stays dense throughout. AMTFlow writes notes in every 5 s chunk of the track.",
+      tags: "synth pad", detected: "piano, guitar, bass, drums, synthesizer" },
+  ];
+  const VERSIONS = [["AMTFlow", "amtflow"], ["MuScriptor, no tags", "no-tags"], ["MuScriptor, all tags", "all-tags"]];
+
+  function player(c, version) {
+    const p = document.createElement("midi-realplayer");
+    p.setAttribute("src", `midi/${c.id}-${VERSIONS[version][1]}.mid`);
+    p.setAttribute("file-name", `jamendo-${c.id}-${VERSIONS[version][1]}.mid`);
+    if (document.documentElement.dataset.theme) p.setAttribute("theme", document.documentElement.dataset.theme);
+    const audio = document.createElement("midi-realplayer-audio");
+    audio.setAttribute("src", `audio/${c.id}.mp3`);
+    audio.setAttribute("label", "Recording");
+    p.append(audio);
+    return p;
+  }
+
+  const root = document.getElementById("cases");
+  for (const c of CASES) {
+    const sec = document.createElement("section");
+    sec.className = "case";
+    sec.innerHTML = `
+      <div class="case-head"><h3><a></a></h3><span class="license"></span></div>
+      <p></p>
+      <div class="facts">
+        <span>Jamendo tags: <b class="tags"></b></span>
+        <span>AMTFlow detected: <b class="det"></b></span>
+        <span>Excerpt: <b class="win"></b></span>
+      </div>
+      <div class="switch" role="group" aria-label="Transcription"></div>`;
+    const a = sec.querySelector("h3 a");
+    a.textContent = c.title;
+    a.href = `https://www.jamendo.com/track/${c.id}`;
+    sec.querySelector(".license").textContent = c.license;
+    sec.querySelector("p").textContent = c.text;
+    sec.querySelector(".tags").textContent = c.tags;
+    sec.querySelector(".det").textContent = c.detected;
+    sec.querySelector(".win").textContent = c.window || "0:45–1:15";
+    const sw = sec.querySelector(".switch");
+    let current = player(c, 0);
+    VERSIONS.forEach(([label], v) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.setAttribute("aria-pressed", String(v === 0));
+      b.addEventListener("click", () => {
+        if (b.getAttribute("aria-pressed") === "true") return;
+        for (const other of sw.children) other.setAttribute("aria-pressed", String(other === b));
+        const next = player(c, v);
+        current.replaceWith(next);
+        current = next;
+      });
+      sw.append(b);
+    });
+    sec.append(current);
+    root.append(sec);
+  }
+
+  // Theme: system setting by default; the toggle stores an explicit choice and passes
+  // it to every player through their `theme` attribute.
+  const html = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+  const systemDark = matchMedia("(prefers-color-scheme: dark)");
+  const effective = () => html.dataset.theme || (systemDark.matches ? "dark" : "light");
+  function apply(choice) {
+    if (choice) html.dataset.theme = choice; else delete html.dataset.theme;
+    for (const p of document.querySelectorAll("midi-realplayer")) {
+      if (choice) p.setAttribute("theme", choice); else p.removeAttribute("theme");
+    }
+    html.dataset.effectiveTheme = effective();
+    toggle.setAttribute("aria-label", `Switch to ${effective() === "dark" ? "light" : "dark"} theme`);
+  }
+  let saved = null;
+  try { saved = localStorage.getItem("amtflow-demo-theme"); } catch {}
+  apply(saved === "light" || saved === "dark" ? saved : null);
+  systemDark.addEventListener("change", () => apply(html.dataset.theme || null));
+  toggle.addEventListener("click", () => {
+    const next = effective() === "dark" ? "light" : "dark";
+    apply(next);
+    try { localStorage.setItem("amtflow-demo-theme", next); } catch {}
+  });
+</script>
+</body>
+</html>

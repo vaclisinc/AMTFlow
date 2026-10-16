@@ -1,0 +1,209 @@
+# The MIDI-REPA paper's pipeline (JamendoMIDI): mixture -> MATPAC++ ∪ Music Flamingo -> seven
+# families -> one MuScriptor instrument per family (hard constraint) -> notes / family
+# cube. Every other built-in config extends this file; default.yaml is the recommended one.
+
+families:
+  # family: MuScriptor instrument groups used as the constraint when it is detected
+  piano: [acoustic_piano]
+  guitar: [clean_electric_guitar]
+  bass: [electric_bass]
+  drums: [drums]
+  strings: [violin]
+  winds: [brass_section]
+  synthesizer: [synth_pad]
+fallback_families: [piano]      # when no tagger detects a routing family
+
+# Tagger labels (normalized: lowercase, alphanumerics only) -> family. Labels mapped
+# to null are recognized but do not route (e.g. vocals, organ, generic percussion).
+label_families:
+  piano: piano
+  electricpiano: piano
+  rhodes: piano
+  guitar: guitar
+  acousticguitar: guitar
+  classicalguitar: guitar
+  electricguitar: guitar
+  banjo: guitar
+  mandolin: guitar
+  ukulele: guitar
+  bass: bass
+  acousticbassguitar: bass
+  bassguitar: bass
+  electricbass: bass
+  acousticbass: bass
+  uprightbass: bass
+  synthbass: bass
+  drums: drums
+  beat: drums
+  drummachine: drums
+  cymbals: drums
+  drumkit: drums
+  hihat: drums
+  snare: drums
+  kick: drums
+  percussion: null
+  cello: strings
+  doublebass: strings
+  harp: strings
+  orchestra: strings
+  strings: strings
+  string: strings
+  stringsection: strings
+  viola: strings
+  violin: strings
+  accordion: winds
+  brass: winds
+  clarinet: winds
+  flute: winds
+  harmonica: winds
+  horn: winds
+  horns: winds
+  sax: winds
+  woodwinds: winds
+  oboe: winds
+  saxophone: winds
+  trombone: winds
+  trumpet: winds
+  winds: winds
+  synthesizer: synthesizer
+  synth: synthesizer
+  synths: synthesizer
+  synthlead: synthesizer
+  leadsynth: synthesizer
+  synthpad: synthesizer
+  synthstrings: strings
+  computer: synthesizer
+  keyboard: synthesizer
+  pad: synthesizer
+  sampler: synthesizer
+  organ: null
+  pipeorgan: null
+  voice: null
+  vocals: null
+  vocal: null
+  choir: null
+  bongo: null
+  bell: null
+  malletpercussion: null
+
+# Fine routing (off in the paper: `routing.mode: family`). Every MuScriptor group a
+# family may route to, and the specific groups each tagger label names; generic labels
+# ("guitar", "synthesizer", "bass") name no group and only vote for the family.
+family_groups:
+  piano: [acoustic_piano, electric_piano]
+  guitar: [acoustic_guitar, clean_electric_guitar, distorted_electric_guitar]
+  bass: [acoustic_bass, electric_bass]
+  drums: [drums]
+  strings: [violin, viola, cello, contrabass, orchestral_harp, string_ensemble, synth_strings]
+  winds: [trumpet, trombone, tuba, french_horn, brass_section, soprano_and_alto_sax, tenor_sax,
+          baritone_sax, oboe, english_horn, bassoon, clarinet, flutes]
+  synthesizer: [synth_lead, synth_pad]
+label_groups:
+  piano: [acoustic_piano]
+  grandpiano: [acoustic_piano]
+  acousticpiano: [acoustic_piano]
+  electricpiano: [electric_piano]
+  rhodes: [electric_piano]
+  wurlitzer: [electric_piano]
+  acousticguitar: [acoustic_guitar]
+  classicalguitar: [acoustic_guitar]
+  nylonguitar: [acoustic_guitar]
+  steelguitar: [acoustic_guitar]
+  banjo: [acoustic_guitar]
+  mandolin: [acoustic_guitar]
+  ukulele: [acoustic_guitar]
+  electricguitar: [clean_electric_guitar, distorted_electric_guitar]
+  cleanguitar: [clean_electric_guitar]
+  cleanelectricguitar: [clean_electric_guitar]
+  jazzguitar: [clean_electric_guitar]
+  distorted: [distorted_electric_guitar]
+  distortion: [distorted_electric_guitar]
+  distortedguitar: [distorted_electric_guitar]
+  distortionguitar: [distorted_electric_guitar]
+  overdrive: [distorted_electric_guitar]
+  overdrivenguitar: [distorted_electric_guitar]
+  electricbass: [electric_bass]
+  bassguitar: [electric_bass]
+  synthbass: [electric_bass]
+  acousticbassguitar: [acoustic_bass]
+  acousticbass: [acoustic_bass]
+  uprightbass: [acoustic_bass]
+  drums: [drums]
+  drumkit: [drums]
+  drummachine: [drums]
+  violin: [violin]
+  fiddle: [violin]
+  viola: [viola]
+  cello: [cello]
+  doublebass: [contrabass]
+  contrabass: [contrabass]
+  harp: [orchestral_harp]
+  strings: [string_ensemble]
+  stringsection: [string_ensemble]
+  stringensemble: [string_ensemble]
+  orchestra: [string_ensemble]
+  synthstrings: [synth_strings]
+  trumpet: [trumpet]
+  trombone: [trombone]
+  tuba: [tuba]
+  horn: [french_horn]
+  frenchhorn: [french_horn]
+  brass: [brass_section]
+  brasssection: [brass_section]
+  horns: [brass_section]
+  hornsection: [brass_section]
+  saxophone: [soprano_and_alto_sax, tenor_sax]
+  sax: [soprano_and_alto_sax, tenor_sax]
+  altosax: [soprano_and_alto_sax]
+  sopranosax: [soprano_and_alto_sax]
+  tenorsax: [tenor_sax]
+  baritonesax: [baritone_sax]
+  oboe: [oboe]
+  englishhorn: [english_horn]
+  bassoon: [bassoon]
+  clarinet: [clarinet]
+  flute: [flutes]
+  piccolo: [flutes]
+  recorder: [flutes]
+  panflute: [flutes]
+  synthlead: [synth_lead]
+  leadsynth: [synth_lead]
+  synthpad: [synth_pad]
+  pad: [synth_pad]
+routing:
+  mode: family             # family | top1 | topn ; see families.Taxonomy
+  fallback: default
+
+separator:
+  name: none
+
+tagger:
+  name: union
+  members:
+    - name: matpac
+      variant: music
+      heads: [openmic, mtg_instrument]
+      probe_dir: auto             # the authors' released probes, downloaded on first use
+      window_seconds: 6.0
+      hop_seconds: 6.0
+      top_fraction: 0.10
+      minimum_windows: 2
+      # Per-family probability thresholds (0.5 everywhere: the setting every result in
+      # results/ was produced with).
+      thresholds: {piano: 0.5, guitar: 0.5, bass: 0.5, drums: 0.5, strings: 0.5, winds: 0.5}
+    # Music Flamingo asked the paper's open and closed instrument questions; runs
+    # in-process (downloaded on first use). To use a served model instead set
+    # `backend: http` and `base_url` (see taggers.HttpALM).
+    - name: alm
+      model: music-flamingo
+      prompt: both
+      label_overrides: {percussion: drums}
+
+transcriber:
+  name: muscriptor
+  weights: large
+  batch_size: 1
+  prelude_forcing: true
+
+output:
+  cube_frames_per_second: null  # set to render a family x time x 88 cube per clip

@@ -1,0 +1,5 @@
+{"what": "MATPAC++ music layer 11 (last), z-scored on train; per-class sklearn LogisticRegression on observed entries; masked mAP",
+ "sklearn_logreg": {"C=0.001": {"val": 0.8767, "test": 0.8583}, "C=0.01": {"val": 0.8609, "test": 0.841}, "C=0.1": {"val": 0.8489, "test": 0.8261}},
+ "official_matpac_openmic_probe": {"val": 0.9317, "test": 0.8612},
+ "amtflow_linear_probe_unregularized": {"test": 0.7851},
+ "conclusion": "the unregularized Adam linear probe underfits the optimum of high-dimensional features; a strongly L2-regularized linear model matches the authors' probe. The official probe's val >> test is expected: it was trained on the full official train split, which contains our val."}

@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="1600" height="650" role="img" aria-label="AMTFlow framework, left to right: audio, optional source separation, instrument recognition and family routing (together the optional instrument conditioning), a pretrained AMT model, MIDI with an instrument on every note."><style>
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap');
+  svg { --sans: 'Hanken Grotesk', system-ui, sans-serif; --mono: 'JetBrains Mono', ui-monospace, monospace; }
+  @media (prefers-reduced-motion: no-preference) { .animated .pulse { visibility: visible; } }
+</style><rect width="1600" height="650" fill="#f4efea"/>
+<circle cx="56" cy="64" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/><circle cx="56" cy="64" r="3.2" fill="#2b4f8f"/>
+<text x="68.0" y="68.5" font-family="var(--sans)" font-size="13" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">default</text>
+<circle cx="138" cy="64" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="150.0" y="68.5" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">also available, chosen in the YAML config</text>
+<rect x="1182" y="46" width="370" height="96" fill="#1d1a17"/><rect x="1176" y="40" width="370" height="96" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<text x="1192.0" y="64.0" font-family="var(--mono)" font-size="11" font-weight="600" fill="#6b645c" text-anchor="start" letter-spacing="0.7">MULTTIPOP TEST · FAMILY F1</text>
+<text x="1192.0" y="93.0" font-family="var(--sans)" font-size="14" font-weight="500" fill="#1d1a17" text-anchor="start" letter-spacing="0">MuScriptor, no tags</text>
+<rect x="1328" y="80" width="140" height="15" fill="#e2dcd4" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="1534.0" y="93.0" font-family="var(--mono)" font-size="14.5" font-weight="700" fill="#1d1a17" text-anchor="end" letter-spacing="0">29.4</text>
+<text x="1192.0" y="123.0" font-family="var(--sans)" font-size="14" font-weight="700" fill="#1d1a17" text-anchor="start" letter-spacing="0">AMTFlow</text>
+<rect x="1328" y="110" width="155" height="15" fill="#2b4f8f" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="1534.0" y="123.0" font-family="var(--mono)" font-size="14.5" font-weight="700" fill="#1d1a17" text-anchor="end" letter-spacing="0">32.5</text>
+<rect x="448" y="146" width="682" height="434" fill="#e1f1ff" stroke="#1d1a17" stroke-width="1.5"/>
+<rect x="460" y="158" width="302" height="22" fill="#8fd0ff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="468.0" y="173.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0.8">INSTRUMENT CONDITIONING · OPTIONAL</text>
+<path d="M308.0,562 V612 H1270.0 V574" fill="none" stroke="#8b847c" stroke-width="2.2" stroke-dasharray="7 6"/><polygon points="1270.0,564 1263.0,576 1277.0,576" fill="#8b847c"/>
+<rect x="639.0" y="600" width="300" height="24" fill="#f4efea"/>
+<text x="789.0" y="616.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#8b847c" text-anchor="middle" letter-spacing="0.8">NO CONDITIONING → UNCONSTRAINED</text>
+<line x1="158" y1="254" x2="172" y2="254" stroke="#1d1a17" stroke-width="3"/><polygon points="182,254 170,247 170,261" fill="#1d1a17"/>
+<line x1="438" y1="254" x2="452" y2="254" stroke="#1d1a17" stroke-width="3"/><polygon points="462,254 450,247 450,261" fill="#1d1a17"/>
+<line x1="770" y1="254" x2="784" y2="254" stroke="#1d1a17" stroke-width="3"/><polygon points="794,254 782,247 782,261" fill="#1d1a17"/>
+<line x1="1120" y1="254" x2="1134" y2="254" stroke="#1d1a17" stroke-width="3"/><polygon points="1144,254 1132,247 1132,261" fill="#1d1a17"/>
+<line x1="1400" y1="254" x2="1414" y2="254" stroke="#1d1a17" stroke-width="3"/><polygon points="1424,254 1412,247 1412,261" fill="#1d1a17"/>
+<circle class="pulse" r="6" fill="#2b4f8f" stroke="#1d1a17" stroke-width="1.5" visibility="hidden"><animateMotion dur="5s" repeatCount="indefinite" path="M158,254 H1424"/></circle>
+<rect x="50" y="208" width="108" height="104" fill="#1d1a17"/><rect x="44" y="202" width="108" height="104" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<line x1="56.0" y1="249.0" x2="56.0" y2="259.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="65.5" y1="243.0" x2="65.5" y2="265.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="75.0" y1="247.0" x2="75.0" y2="261.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="84.5" y1="238.0" x2="84.5" y2="270.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="94.0" y1="245.0" x2="94.0" y2="263.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="103.5" y1="236.0" x2="103.5" y2="272.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="113.0" y1="243.0" x2="113.0" y2="265.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="122.5" y1="241.0" x2="122.5" y2="267.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="132.0" y1="248.0" x2="132.0" y2="260.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<line x1="141.5" y1="244.0" x2="141.5" y2="264.0" stroke="#1d1a17" stroke-width="3" stroke-linecap="round"/>
+<text x="98.0" y="332.0" font-family="var(--mono)" font-size="12" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="1">AUDIO</text>
+<text x="98.0" y="352.0" font-family="var(--sans)" font-size="13.5" font-weight="500" fill="#6b645c" text-anchor="middle" letter-spacing="0">a full song</text>
+<rect x="190" y="202" width="248" height="360" fill="#1d1a17"/><rect x="184" y="196" width="248" height="360" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<rect x="198" y="210" width="159" height="22" fill="#f4efea" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="206.0" y="225.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0.8">STEP 1 · OPTIONAL</text>
+<text x="198.0" y="262.0" font-family="var(--sans)" font-size="19" font-weight="700" fill="#1d1a17" text-anchor="start" letter-spacing="-0.2">Source separation</text>
+<text x="198.0" y="284.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">Split the mix into stems first?</text>
+<rect x="198" y="300" width="220" height="46" fill="#e9eef7" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="213" cy="316" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="213" cy="316" r="3.2" fill="#2b4f8f"/>
+<text x="227.0" y="321.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">None</text>
+<text x="227.0" y="338.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">transcribe the full mix</text>
+<rect x="198" y="352" width="220" height="46" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="213" cy="368" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="227.0" y="373.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">BS-RoFormer</text>
+<text x="227.0" y="390.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">6 stems: bass, drums, guitar, …</text>
+<rect x="198" y="404" width="220" height="46" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="213" cy="420" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="227.0" y="425.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">Precomputed stems</text>
+<text x="227.0" y="442.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">reuse an earlier separation</text>
+<rect x="470" y="202" width="300" height="360" fill="#1d1a17"/><rect x="464" y="196" width="300" height="360" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<rect x="478" y="210" width="66" height="22" fill="#ffd84d" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="486.0" y="225.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0.8">STEP 2</text>
+<text x="478.0" y="262.0" font-family="var(--sans)" font-size="19" font-weight="700" fill="#1d1a17" text-anchor="start" letter-spacing="-0.2">Instrument recognition</text>
+<text x="478.0" y="284.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">Which instruments are playing?</text>
+<rect x="478" y="300" width="272" height="46" fill="#e9eef7" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="493" cy="316" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="493" cy="316" r="3.2" fill="#2b4f8f"/>
+<text x="507.0" y="321.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">MATPAC++ ∪ Music Flamingo</text>
+<text x="507.0" y="338.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">an audio encoder + an audio LLM</text>
+<rect x="478" y="352" width="272" height="46" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="493" cy="368" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="507.0" y="373.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">Audio encoders</text>
+<text x="507.0" y="390.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">MATPAC++, MERT, MuQ, … (8 in total)</text>
+<rect x="478" y="404" width="272" height="46" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="493" cy="420" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="507.0" y="425.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">Audio-language models</text>
+<text x="507.0" y="442.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">Music Flamingo, Qwen3-Omni</text>
+<rect x="478" y="456" width="272" height="46" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="493" cy="472" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="507.0" y="477.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">Ensembles</text>
+<text x="507.0" y="494.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">union · majority vote · at least k</text>
+<rect x="802" y="202" width="318" height="360" fill="#1d1a17"/><rect x="796" y="196" width="318" height="360" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<rect x="810" y="210" width="66" height="22" fill="#ffd84d" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="818.0" y="225.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0.8">STEP 3</text>
+<text x="810.0" y="262.0" font-family="var(--sans)" font-size="19" font-weight="700" fill="#1d1a17" text-anchor="start" letter-spacing="-0.2">Family routing</text>
+<text x="810.0" y="284.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">Which instrument families to transcribe?</text>
+<text x="810.0" y="312.0" font-family="var(--mono)" font-size="11" font-weight="600" fill="#6b645c" text-anchor="start" letter-spacing="0.7">7 FAMILIES + VOICE</text>
+<rect x="810.0" y="320" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="844.4" y="336.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Piano</text>
+<rect x="883.8" y="320" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="918.1" y="336.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Guitar</text>
+<rect x="957.5" y="320" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="991.9" y="336.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Bass</text>
+<rect x="1031.2" y="320" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="1065.6" y="336.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Drums</text>
+<rect x="810.0" y="350" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="844.4" y="366.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Strings</text>
+<rect x="883.8" y="350" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="918.1" y="366.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Winds</text>
+<rect x="957.5" y="350" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="991.9" y="366.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Synth</text>
+<rect x="1031.2" y="350" width="68.8" height="24" fill="#f4efea" stroke="#1d1a17" stroke-width="1.3"/>
+<text x="1065.6" y="366.5" font-family="var(--sans)" font-size="12.5" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="0">Voice</text>
+<rect x="810" y="390" width="290" height="62" fill="#e9eef7" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="825" cy="406" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="825" cy="406" r="3.2" fill="#2b4f8f"/>
+<text x="839.0" y="411.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">Top-N per family</text>
+<text x="839.0" y="428.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">types the audio supports, up to 3</text>
+<text x="839.0" y="444.0" font-family="var(--sans)" font-size="12" font-weight="600" fill="#2b4f8f" text-anchor="start" letter-spacing="0">e.g. guitar → acoustic + distorted</text>
+<rect x="810" y="456" width="290" height="62" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="825" cy="472" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="839.0" y="477.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">One per family</text>
+<text x="839.0" y="494.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">always the same type (MIDI-REPA)</text>
+<text x="839.0" y="510.0" font-family="var(--sans)" font-size="12" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">e.g. guitar → clean electric</text>
+<text x="810.0" y="538.0" font-family="var(--mono)" font-size="11" font-weight="600" fill="#6b645c" text-anchor="start" letter-spacing="0.7">+ FINER FAMILIES (BRASS, REEDS, …)</text>
+<rect x="1152" y="202" width="248" height="360" fill="#1d1a17"/><rect x="1146" y="196" width="248" height="360" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<rect x="1160" y="210" width="66" height="22" fill="#ff9f4a" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="1168.0" y="225.5" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0.8">STEP 4</text>
+<text x="1160.0" y="262.0" font-family="var(--sans)" font-size="19" font-weight="700" fill="#1d1a17" text-anchor="start" letter-spacing="-0.2">Pretrained AMT model</text>
+<text x="1160.0" y="284.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">Transcribes your music using only</text>
+<text x="1160.0" y="302.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">the instruments it is given.</text>
+<rect x="1160" y="318" width="220" height="46" fill="#e9eef7" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="1175" cy="334" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<circle cx="1175" cy="334" r="3.2" fill="#2b4f8f"/>
+<text x="1189.0" y="339.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#1d1a17" text-anchor="start" letter-spacing="0">MuScriptor</text>
+<text x="1189.0" y="356.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">small · medium · large</text>
+<rect x="1160" y="370" width="220" height="46" fill="none" stroke="#1d1a17" stroke-width="1.5" stroke-dasharray="5 4"/>
+<circle cx="1175" cy="386" r="6" fill="#ffffff" stroke="#1d1a17" stroke-width="1.5"/>
+<text x="1189.0" y="391.0" font-family="var(--sans)" font-size="14" font-weight="600" fill="#6b645c" text-anchor="start" letter-spacing="0">Your AMT model</text>
+<text x="1189.0" y="408.0" font-family="var(--sans)" font-size="12" font-weight="500" fill="#6b645c" text-anchor="start" letter-spacing="0">takes an instrument set</text>
+<rect x="1432" y="208" width="150" height="104" fill="#1d1a17"/><rect x="1426" y="202" width="150" height="104" fill="#ffffff" stroke="#1d1a17" stroke-width="2"/>
+<rect x="1436" y="218" width="130" height="26" fill="#e8efff" stroke="#1d1a17" stroke-width="1.2"/>
+<rect x="1444" y="228" width="22" height="6" fill="#2b4f8f"/>
+<rect x="1472" y="228" width="14" height="6" fill="#2b4f8f"/>
+<rect x="1492" y="228" width="30" height="6" fill="#2b4f8f"/>
+<rect x="1528" y="228" width="24" height="6" fill="#2b4f8f"/>
+<rect x="1436" y="244" width="130" height="26" fill="#e3f6f1" stroke="#1d1a17" stroke-width="1.2"/>
+<rect x="1444" y="254" width="34" height="6" fill="#2a9d84"/>
+<rect x="1484" y="254" width="20" height="6" fill="#2a9d84"/>
+<rect x="1512" y="254" width="44" height="6" fill="#2a9d84"/>
+<rect x="1436" y="270" width="130" height="26" fill="#fdf0e2" stroke="#1d1a17" stroke-width="1.2"/>
+<rect x="1446" y="280" width="4" height="6" fill="#e07a2a"/>
+<rect x="1466" y="280" width="4" height="6" fill="#e07a2a"/>
+<rect x="1486" y="280" width="4" height="6" fill="#e07a2a"/>
+<rect x="1506" y="280" width="4" height="6" fill="#e07a2a"/>
+<rect x="1526" y="280" width="4" height="6" fill="#e07a2a"/>
+<rect x="1546" y="280" width="4" height="6" fill="#e07a2a"/>
+<text x="1501.0" y="332.0" font-family="var(--mono)" font-size="12" font-weight="600" fill="#1d1a17" text-anchor="middle" letter-spacing="1">MIDI</text>
+<text x="1501.0" y="352.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="middle" letter-spacing="0">notes with instruments</text>
+<text x="1501.0" y="370.0" font-family="var(--sans)" font-size="13" font-weight="500" fill="#6b645c" text-anchor="middle" letter-spacing="0">+ JSON · piano-roll cube</text></svg>

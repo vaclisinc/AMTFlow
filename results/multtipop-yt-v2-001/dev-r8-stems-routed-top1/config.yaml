@@ -1,0 +1,7 @@
+extends: stems.yaml
+routing: {mode: top1}
+stems:
+  bass: {families: [bass], route: true}
+  guitar: {families: [guitar], route: true}
+  piano: {families: [piano], route: true}
+transcriber: {weights: medium, batch_size: 1, prelude_forcing: true}

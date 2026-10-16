@@ -1,0 +1,2 @@
+extends: fast.yaml
+tagger: {name: fixed, families: [guitar]}

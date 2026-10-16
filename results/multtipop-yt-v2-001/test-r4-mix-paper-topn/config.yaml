@@ -1,0 +1,3 @@
+extends: paper.yaml
+routing: {mode: topn, ratio: 0.5, max_per_family: 3}
+transcriber: {weights: medium, batch_size: 1, prelude_forcing: true}

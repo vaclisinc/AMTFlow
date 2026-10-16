@@ -1,0 +1,35 @@
+# fine.yaml plus a voice family (MuScriptor `voice`), for songs with vocals.
+extends: fine.yaml
+
+families:
+  voice: [voice]
+family_groups:
+  voice: [voice]
+label_families:
+  voice: voice
+  vocals: voice
+  vocal: voice
+  choir: voice
+  singing: voice
+label_groups:
+  voice: [voice]
+  vocals: [voice]
+  choir: [voice]
+
+tagger:
+  name: union
+  members:
+    - name: matpac
+      variant: music
+      heads: [openmic, mtg_instrument]
+      probe_dir: auto
+      window_seconds: 6.0
+      hop_seconds: 6.0
+      top_fraction: 0.10
+      minimum_windows: 2
+      thresholds: {piano: 0.5, guitar: 0.5, bass: 0.5, drums: 0.5, strings: 0.5, brass: 0.5,
+                   reeds: 0.5, flutes: 0.5, organ: 0.5, chromatic: 0.5, voice: 0.5}
+    - name: alm
+      model: music-flamingo
+      prompt: both
+      label_overrides: {percussion: drums}

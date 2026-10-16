@@ -1,0 +1,16 @@
+# Majority vote over several instrument taggers, ALMs included. Every member is
+# optional: add, remove or swap members, or change the policy (union | majority |
+# at_least with k). Heads `openmic/<encoder>-mlp` are published on the Hub
+# (vaclis/amtflow); models and heads download on first use.
+extends: paper.yaml
+
+tagger:
+  name: vote
+  policy: majority          # more than half of the members that did not abstain
+  fallback: plurality       # then the families with the most votes, then fallback_families
+  members:
+    - {name: probe, head: openmic/matpac-music-mlp}
+    - {name: probe, head: openmic/pupum2d-mlp}
+    - {name: probe, head: openmic/af3-whisper-mlp}
+    - {name: alm, model: qwen3-omni, prompt: open, label_overrides: {percussion: drums}}
+    - {name: alm, model: music-flamingo, prompt: open, label_overrides: {percussion: drums}}

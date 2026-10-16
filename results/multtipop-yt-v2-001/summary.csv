@@ -1,0 +1,43 @@
+arm,split,segments,description,exact,hp,group,family,agnostic,family_P,agnostic_P,family_R,agnostic_R
+r1-mix-none,dev,166,"mixture, no instrument constraint",19.98,43.91,30.94,35.07,44.73,39.0,50.42,33.93,43.82
+r2-mix-paper,dev,166,"mixture, paper tagger",18.01,45.11,24.37,37.86,45.06,41.89,50.23,36.67,44.11
+r3-mix-oracle,dev,166,"mixture, oracle families",18.46,45.78,25.6,40.36,45.4,44.3,49.85,39.28,45.28
+r4-mix-paper-topn,dev,166,"mixture, paper tagger + top-N routing",22.16,46.11,30.99,39.85,45.7,43.53,50.41,38.86,45.24
+r4b-mix-paper-topn-batched,dev,166,"R4 with batched decoding (batch 6, no prelude)",21.77,45.52,30.65,38.93,45.1,43.17,50.78,37.38,43.73
+r5-stems-paper,dev,166,"stems, paper tagger on other",18.53,42.69,30.88,35.8,41.96,36.33,42.44,37.86,45.93
+r6-stems-oracle,dev,166,"stems, oracle on other",18.6,42.92,31.09,36.7,42.34,37.76,43.67,38.4,45.59
+r7-stems-other-topn,dev,166,"stems, top-N on other",17.78,42.15,29.92,35.29,41.34,35.86,41.76,37.85,46.03
+r8-stems-routed-top1,dev,166,"stems, all stems + other top-1",18.78,42.47,27.86,35.45,41.74,36.95,43.42,36.89,44.73
+pub:muscriptor,dev,166,published output (authors' audio),20.06,43.94,31.62,35.54,44.7,39.39,49.92,34.43,43.72
+pub:mt3,dev,166,published output (authors' audio),11.52,30.12,16.72,18.86,30.49,19.27,34.43,19.64,30.11
+pub:yourmt3,dev,166,published output (authors' audio),11.57,30.82,18.52,21.57,30.89,23.13,34.62,21.54,30.84
+r1-mix-none,dev_rich,74,"mixture, no instrument constraint",15.28,39.43,24.4,28.2,40.74,33.12,48.21,25.91,37.92
+r2-mix-paper,dev_rich,74,"mixture, paper tagger",16.08,41.27,21.63,32.89,41.67,36.97,47.48,31.02,40.04
+r3-mix-oracle,dev_rich,74,"mixture, oracle families",16.35,42.33,22.67,36.36,42.32,40.71,47.21,34.4,41.28
+r4-mix-paper-topn,dev_rich,74,"mixture, paper tagger + top-N routing",17.95,42.08,24.98,33.99,42.26,37.97,47.66,32.27,40.97
+r4b-mix-paper-topn-batched,dev_rich,74,"R4 with batched decoding (batch 6, no prelude)",18.12,41.15,25.41,33.22,41.09,38.17,48.08,30.99,38.88
+r5-stems-paper,dev_rich,74,"stems, paper tagger on other",14.87,38.39,24.89,30.07,37.77,29.88,36.74,32.08,42.63
+r6-stems-oracle,dev_rich,74,"stems, oracle on other",14.98,38.59,25.08,30.82,38.11,31.07,38.36,32.62,42.23
+r7-stems-other-topn,dev_rich,74,"stems, top-N on other",14.66,37.7,24.34,29.42,36.96,28.93,35.85,32.3,42.78
+r8-stems-routed-top1,dev_rich,74,"stems, all stems + other top-1",15.99,38.0,23.79,29.68,37.43,30.03,37.54,31.53,41.53
+pub:muscriptor,dev_rich,74,published output (authors' audio),15.44,39.35,25.31,29.16,40.77,34.07,47.38,27.03,38.38
+pub:mt3,dev_rich,74,published output (authors' audio),9.63,27.42,13.85,15.83,28.47,16.88,33.66,15.71,26.99
+pub:yourmt3,dev_rich,74,published output (authors' audio),9.15,27.42,14.88,18.17,28.34,19.67,32.41,18.0,28.34
+r1-mix-none,test,392,"mixture, no instrument constraint",17.58,41.05,25.62,29.71,42.49,34.58,50.04,27.61,40.18
+r2-mix-paper,test,392,"mixture, paper tagger",16.89,42.73,23.61,32.75,43.32,36.73,49.16,31.12,41.99
+r3-mix-oracle,test,392,"mixture, oracle families",17.42,43.47,25.11,35.62,44.0,39.37,49.29,34.22,43.02
+r4-mix-paper-topn,test,392,"mixture, paper tagger + top-N routing",18.93,42.69,26.66,33.69,43.12,37.62,48.69,32.39,42.6
+r6-stems-oracle,test,392,"stems, oracle on other",17.03,40.92,26.65,32.92,40.79,33.92,41.59,34.5,44.84
+r7-stems-other-topn,test,392,"stems, top-N on other",17.16,40.48,26.12,32.13,40.48,32.75,40.88,34.29,45.35
+pub:muscriptor,test,392,published output (authors' audio),17.2,41.01,25.31,29.43,42.96,34.57,50.51,27.17,40.4
+pub:mt3,test,392,published output (authors' audio),10.66,27.05,13.58,15.51,28.05,16.65,33.51,15.6,26.81
+pub:yourmt3,test,392,published output (authors' audio),11.5,28.17,15.88,18.91,29.27,21.17,34.75,18.4,28.6
+r1-mix-none,test_rich,236,"mixture, no instrument constraint",15.79,37.09,20.15,24.21,37.78,30.24,47.85,21.41,33.98
+r2-mix-paper,test_rich,236,"mixture, paper tagger",16.82,40.14,21.88,28.72,39.57,33.36,46.71,26.51,37.3
+r3-mix-oracle,test_rich,236,"mixture, oracle families",16.92,40.28,22.98,30.94,39.86,35.35,46.66,28.98,37.78
+r4-mix-paper-topn,test_rich,236,"mixture, paper tagger + top-N routing",17.35,39.64,22.06,29.25,38.96,33.49,45.41,27.69,37.81
+r6-stems-oracle,test_rich,236,"stems, oracle on other",15.67,37.82,21.96,28.3,36.72,29.8,38.07,29.26,40.07
+r7-stems-other-topn,test_rich,236,"stems, top-N on other",16.0,37.36,21.77,27.7,36.36,28.57,37.04,29.36,40.71
+pub:muscriptor,test_rich,236,published output (authors' audio),15.3,37.12,20.22,24.14,38.14,30.45,47.87,21.19,34.15
+pub:mt3,test_rich,236,published output (authors' audio),10.07,24.81,11.69,13.52,25.04,15.28,32.3,13.03,22.8
+pub:yourmt3,test_rich,236,published output (authors' audio),10.41,24.85,12.83,15.26,25.27,18.24,32.28,14.24,23.69

@@ -1,0 +1,19 @@
+split,reference,arm,baseline,space,mean_diff,ci95_low,ci95_high
+test,official,R4 default (7 families),pub:muscriptor,exact,1.73,1.12,2.36
+test,official,R4 default (7 families),pub:muscriptor,family,4.26,3.42,5.16
+test,official,R4 default (7 families),pub:muscriptor,agnostic,0.16,-0.58,0.91
+test,official,R9 default + voice,pub:muscriptor,exact,1.11,0.42,1.75
+test,official,R9 default + voice,pub:muscriptor,family,3.08,2.2,3.99
+test,official,R9 default + voice,pub:muscriptor,agnostic,1.02,0.33,1.75
+test,official,R9 default + voice,R4 default (7 families),exact,-0.62,-1.04,-0.26
+test,official,R9 default + voice,R4 default (7 families),family,-1.18,-1.61,-0.77
+test,official,R9 default + voice,R4 default (7 families),agnostic,0.86,0.32,1.41
+test,vocal_corrected,R4 default (7 families),pub:muscriptor,exact,1.3,0.67,1.95
+test,vocal_corrected,R4 default (7 families),pub:muscriptor,family,3.87,3.02,4.77
+test,vocal_corrected,R4 default (7 families),pub:muscriptor,agnostic,0.16,-0.58,0.91
+test,vocal_corrected,R9 default + voice,pub:muscriptor,exact,1.55,0.85,2.25
+test,vocal_corrected,R9 default + voice,pub:muscriptor,family,3.57,2.71,4.49
+test,vocal_corrected,R9 default + voice,pub:muscriptor,agnostic,1.02,0.33,1.75
+test,vocal_corrected,R9 default + voice,R4 default (7 families),exact,0.25,-0.21,0.69
+test,vocal_corrected,R9 default + voice,R4 default (7 families),family,-0.3,-0.79,0.19
+test,vocal_corrected,R9 default + voice,R4 default (7 families),agnostic,0.86,0.32,1.41
